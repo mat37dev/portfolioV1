@@ -8,8 +8,15 @@
 
     <!-- Feuille CSS-->
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/color-1.css">
+    <link rel="stylesheet" href="CSS/couleurs/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Style Switcher -->
+    <link rel="stylesheet" href="CSS/couleurs/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="CSS/couleurs/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="CSS/couleurs/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="CSS/couleurs/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="CSS/couleurs/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="CSS/style-switcher.css">
     <!-- <script src="https://kit.fontawesome.com/6477c38972.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
@@ -24,11 +31,11 @@
             <span></span>
         </div>
         <ul class="nav">
-            <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href="#"><i class="fa fa-user"></i>About</a></li>
-            <li><a href="#"><i class="fa fa-list"></i>Services</a></li>
-            <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-            <li><a href="#"><i class="fa fa-comments"></i>Contact</a></li>
+            <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+            <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
+            <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+            <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
         </ul>
     </div>
     <!-- cote End -->
@@ -36,7 +43,7 @@
     <!-- Main Content Start-->
     <div class="main-content">
         <!-- Home section Start-->
-        <section class="home section hidden">
+        <section class="home active section" id="home">
             <div class="container">
                 <div class="row">
                     <div class="home-info padd-15">
@@ -44,7 +51,7 @@
                         <h3 class="profession">Je suis <span class="type">développeur</span></h3>
                         <p>Je suis en première année de BTS SIO option SLAM. Je développe par passion des jeux en C#
                             depuis bientôt 5 ans.</p>
-                        <a href="#contact" class="btn hire-me">Plus Sur Moi</a>
+                        <a href="#about" class="btn hire-me">Plus Sur Moi</a>
                     </div>
                     <div class="home-img padd-15">
                         <img src="image/profile.png" alt="">
@@ -54,7 +61,7 @@
         </section>
         <!-- Home section End-->
         <!--About Section Start -->
-        <section class="about section hidden">
+        <section class="about section" id="about">
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
@@ -108,7 +115,7 @@
                                 <div class="row">
                                     <div class="buttons padd-15">
                                         <a href="#" class="btn">Télécharger mon CV</a>
-                                        <a href="#contact" class="btn hire-me">Sur Moi</a>
+                                        <a href="#contact" class="btn hire-me">Contact</a>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +206,7 @@
         </section>
     <!--About Section End -->
     <!-- Services section Start-->
-        <section class="service section hidden">
+        <section class="service section" id="services">
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
@@ -233,7 +240,7 @@
     <!-- Services section End-->
 
     <!-- Portfolio section Start-->
-        <section class="portfolio section hidden">
+        <section class="portfolio section" id="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
@@ -279,11 +286,11 @@
     <!-- Portfolio section End-->
 
     <!-- Contact section Start-->
-        <section class="contact section">
+        <section class="contact section" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
-                        <h2>Contacte Moi</h2>
+                        <h2>Contactez Moi</h2>
                     </div>
                 </div>
                 <h3 class="contact-title padd-15">Avez-vous une Question?</h3>
@@ -292,7 +299,7 @@
                     <!-- Contact Info Item Start-->
                     <div class="contact-info-item padd-15">
                         <div class="icon"><i class="fa fa-phone"></i></div>
-                        <h4>Appel Moi</h4>
+                        <h4>Appellez Moi</h4>
                         <p>07 84 95 61 30</p>
                     </div>
                     <!-- Contact Info Item end-->
@@ -334,6 +341,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="form-item col-12 padd-15">
+                            <button type="submit" class="btn">Envoyer un Message</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -342,8 +354,27 @@
 <!-- Main content End-->
 </div>
 <!--Main Contener End-->
-
+<!--Style Switcher Start-->
+<div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+        <i class="fas "></i>
+    </div>
+    <h4>Thème Couleurs</h4>
+    <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+</div>
+<!--Style Switcher End-->
 <!-- Code JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 <script src="javaScript/script.js"></script>
+<script src="javaScript/style-switcher.js"></script>
 </body>
 </html>
