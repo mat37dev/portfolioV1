@@ -68,6 +68,7 @@ ul
     z-index: 0;
     overflow-y: auto;
     overflow-x: hidden;
+    transition: all 0.3s ease;
 }
 .section.back-section{
     z-index: 1;
@@ -184,6 +185,7 @@ ul
     justify-content: center;
     align-items: center;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .cote .logo
@@ -218,6 +220,7 @@ ul
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 .cote .nav-toggler span{
     height: 2px;
@@ -225,6 +228,9 @@ ul
     background: var(--skin-color);
     display: inline-block;
     position: relative;
+}
+.cote .nav-toggler.open span{
+    background-color: transparent;
 }
 .cote .nav-toggler span::before{
     content:'';
@@ -235,6 +241,10 @@ ul
     top: -6px;
     left: 0px;
 }
+.cote .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
 .cote .nav-toggler span::after{
     content:'';
     height: 2px;
@@ -243,6 +253,10 @@ ul
     position: absolute;
     top: 6px;
     left: 0px;
+}
+.cote .nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .cote .nav{
@@ -387,7 +401,6 @@ h3.profession{
     margin-top: 30px;
 }
 .about .about-content .info-personnel .buttons .btn{
-    margin-right: 15px;
     margin-top: 10px;
 }
 .about .about-content .skills{
@@ -665,6 +678,9 @@ h3.profession{
     padding: 0 50px;
 }
 @media(max-width: 1199px){
+    .section.container{
+        padding-top: 70px;
+    }
     .cote{
         left: -270px;
     }
@@ -675,8 +691,14 @@ h3.profession{
         display: flex;
         left: 30px;
     }
+    .cote .nav-toggler.open{
+        left: 300px;
+    }
     .section{
         left: 0;
+    }
+    .section.open{
+        left: 270px;
     }
     .about .about-content.info-personnel.info-item p span{
         display: block;
