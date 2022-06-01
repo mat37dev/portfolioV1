@@ -301,9 +301,9 @@ ul
 .container-reseau{
     display: flex;
     box-sizing: border-box;
-
     align-items: center;
-    margin-top: 50px;
+    position: absolute;
+    bottom: 35px;
 }
 .sm-link{
     margin: 0 15px;
@@ -641,6 +641,12 @@ h3.profession{
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
+}
+.portfolio .portfolio-item h3{
+    color: var(--text-black-900);
+}
+.portfolio .portfolio-item p{
+    color: var(--text-black-700);
 }
 .portfolio .portfolio-item-inner{
     border: 6px solid var(--bg-black-100);
