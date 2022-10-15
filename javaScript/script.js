@@ -1,6 +1,6 @@
 /* Animation */
 var typed = new Typed(".type", {
-    strings: ["","Étudiant En Développement", "Développeur Amateur", "Développeur Jeux-Vidéos"],
+    strings: ["","Étudiant En Développement", "Développeur Back End", "Développeur Jeux-Vidéos Amateur"],
     typeSpeed:100,
     BackSpeed:60,
     loop: true
