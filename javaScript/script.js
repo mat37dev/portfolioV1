@@ -59,6 +59,9 @@ document.querySelector(".hire-me").addEventListener("click", function (){
 document.querySelector(".btn-about").addEventListener("click", function (){
     buttonRedirect(this);
 })
+document.querySelector(".btn-portfolio").addEventListener("click", function (){
+    buttonRedirect(this);
+})
 function buttonRedirect(element){
     const sectionIndex = element.getAttribute("data-section-index");
     showSection(element);
