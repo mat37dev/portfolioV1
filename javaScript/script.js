@@ -83,3 +83,19 @@ function coteSectionTogglerBtn(){
         allSection[i].classList.toggle("open");
     }
 }
+
+/* Fermer le modal */
+var modal = document.getElementById("modal");
+var closeButton = document.getElementById("close-modal");
+
+if (modal) {
+    closeButton.onclick = function() {
+        modal.classList.add("hidden");
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.add("hidden");
+        }
+    }
+}
