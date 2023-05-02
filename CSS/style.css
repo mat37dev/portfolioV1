@@ -52,6 +52,11 @@ ul
 .padd-15{
     padding-left: 15px;
     padding-right: 15px;
+
+}
+.buttons.padd-15{
+    display: flex;
+    gap: 1rem;
 }
 .section
 {
